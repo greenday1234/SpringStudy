@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class HelloController {
+    //GetMapping에 들어가는 이름이 곧 URL에서 localhost:8080/~ 다음으로 들어올 이름임
     @GetMapping("hello")
     public String hello(Model model){
         model.addAttribute("data", "hello!");

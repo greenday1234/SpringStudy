@@ -15,6 +15,7 @@ public class MemberController {
 
     private final MemberService memberService;
 
+    //DI
     @Autowired
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
@@ -26,12 +27,14 @@ public class MemberController {
     }
 
     @PostMapping("/members/new")
+    //MemberForm에서 자동으로 값을 받아줌
     public String create(MemberForm form){
         Member member = new Member();
         member.setName(form.getName());
 
         memberService.join(member);
 
+        //뒤로 가기
         return "redirect:/";
     }
 
