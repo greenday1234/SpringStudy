@@ -10,6 +10,7 @@ public class JpaMemberRepository implements MemberRepository{
 
     private final EntityManager em;
 
+    //DI
     public JpaMemberRepository(EntityManager em) {
         this.em = em;
     }

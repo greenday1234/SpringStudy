@@ -15,6 +15,7 @@ public class MemberService {
 
     private final MemberRepository memberRepository;
 
+    //DI
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }

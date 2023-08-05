@@ -19,6 +19,7 @@ public class JdbcTemplateMemberRepository implements MemberRepository {
 
     private final JdbcTemplate jdbcTemplate;
 
+    //DI
     @Autowired  //생략 가능
     public JdbcTemplateMemberRepository(DataSource dataSource){
         jdbcTemplate = new JdbcTemplate(dataSource);
@@ -27,6 +28,7 @@ public class JdbcTemplateMemberRepository implements MemberRepository {
     @Override
     public Member save(Member member) {
         SimpleJdbcInsert jdbcInsert = new SimpleJdbcInsert(jdbcTemplate);
+        //Table과 key값 설정
         jdbcInsert.withTableName("member").usingGeneratedKeyColumns("id");
 
         Map<String, Object> parameters = new HashMap<>();
