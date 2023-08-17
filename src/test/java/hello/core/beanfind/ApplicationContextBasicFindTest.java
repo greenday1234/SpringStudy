@@ -14,6 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ApplicationContextBasicFindTest {
 
+    //구현체
     AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
 
     @Test
