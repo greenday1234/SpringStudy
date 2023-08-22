@@ -14,6 +14,7 @@ public class BeanDefinitionTest {
     @Test
     @DisplayName("빈 설정 메타정보 확인")
     void findApplicationBean(){
+        //빈들을 리스트로 뽑음
         String[] beanDefinitionNames = ac.getBeanDefinitionNames();
         for (String beanDefinitionName : beanDefinitionNames) {
             BeanDefinition beanDefinition = ac.getBeanDefinition(beanDefinitionName);
