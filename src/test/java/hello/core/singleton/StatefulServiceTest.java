@@ -27,6 +27,7 @@ class StatefulServiceTest {
         //Assertions.assertThat(statefulService1.getPrice()).isEqualTo(20000);
     }
 
+    //임의의 Test컨테이너
     static class TestConfig{
 
         @Bean
