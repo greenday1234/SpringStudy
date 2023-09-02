@@ -32,6 +32,7 @@ public class AllBeanTest {
         assertThat(rateDiscountPrice).isEqualTo(2000);
     }
 
+    //테스트용 클래스
     static class DiscountService{
         private final Map<String, DiscountPolicy> policyMap;
         private final List<DiscountPolicy> policies;
@@ -44,6 +45,7 @@ public class AllBeanTest {
             System.out.println("policies = " + policies);
         }
 
+        //인터페이스 의존
         public int discount(Member member, int price, String discountCode) {
             DiscountPolicy discountPolicy = policyMap.get(discountCode);
             return discountPolicy.discount(member, price);
