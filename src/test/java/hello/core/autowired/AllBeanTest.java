@@ -34,7 +34,7 @@ public class AllBeanTest {
 
     //테스트용 클래스
     static class DiscountService{
-        //이런 경우엔 수도 빈 등록을 하는게 좋음
+        //이런 경우엔 수동 빈 등록을 하는게 좋음
         private final Map<String, DiscountPolicy> policyMap;
         private final List<DiscountPolicy> policies;
 
