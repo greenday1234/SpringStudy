@@ -14,6 +14,7 @@ public class LogDemoController {
     private final LogDemoService logDemoService;
     private final MyLogger myLogger;
 
+    //RequestMapping 이므로 아래의 메소드가 바로 실행됨
     @RequestMapping("log-demo")
     @ResponseBody
     public String logDemo(HttpServletRequest request){
