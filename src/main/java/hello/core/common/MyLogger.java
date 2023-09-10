@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
 import java.util.UUID;
 
 @Component
-//value 빼도 됨
-@Scope(value = "request")
+//값이 2개 이상 들어가면 value를 넣어줘야 함
+@Scope(value = "request", proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class MyLogger {
 
     private String uuid;
