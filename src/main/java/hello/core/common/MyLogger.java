@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import java.util.UUID;
 
 @Component
-//값이 2개 이상 들어가면 value를 넣어줘야 함
+//값이 2개 이상 들어가면 value를 넣어줘야 함, 프록시 사용(클래스 단위)
 @Scope(value = "request", proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class MyLogger {
 
