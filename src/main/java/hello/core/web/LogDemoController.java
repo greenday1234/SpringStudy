@@ -21,9 +21,11 @@ public class LogDemoController {
     public String logDemo(HttpServletRequest request){
         String requestURL = request.getRequestURL().toString();
         System.out.println("myLogger = " + myLogger.getClass());
+
         myLogger.setRequestURL(requestURL);
         myLogger.log("controller test");
         logDemoService.logic("testId");
+        //화면에 OK 출력
         return "OK";
     }
 }
