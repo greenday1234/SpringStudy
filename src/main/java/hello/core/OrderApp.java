@@ -13,6 +13,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class OrderApp {
 
     public static void main(String[] args) {
+        //싱글톤 빈 유지 안됨
 //        AppConfig appConfig = new AppConfig();
 //        MemberService memberService = appConfig.memberService();
 //        OrderService orderService = appConfig.orderService();
