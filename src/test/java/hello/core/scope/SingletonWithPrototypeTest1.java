@@ -55,6 +55,7 @@ public class SingletonWithPrototypeTest1 {
         }
 }
 
+    //프로토타입 빈
     @Scope("prototype")
     static class PrototypeBean{
         private int count = 0;
