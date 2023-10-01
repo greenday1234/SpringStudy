@@ -26,10 +26,10 @@ public class RequestHeaderServlet extends HttpServlet {
         System.out.println("request.getProtocol() = " + request.getProtocol()); //HTTP/1.1
         System.out.println("request.getScheme() = " + request.getScheme()); //http
 
-        // http://localhost:8080/request-header
+        // http://localhost:8080/request-header (URL 전체)
         System.out.println("request.getRequestURL() = " + request.getRequestURL());
 
-        // /request-header
+        // /request-header  (URL 뒷부분)
         System.out.println("request.getRequestURI() = " + request.getRequestURI());
 
         //username=hi
