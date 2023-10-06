@@ -13,6 +13,7 @@ class MemberRepositoryTest {
     //싱글톤이기 때문에 getInstance 메소드 호출
     MemberRepository memberRepository = MemberRepository.getInstance();
 
+    //초기화
     @AfterEach
     void afterEach(){
         memberRepository.clearStore();
