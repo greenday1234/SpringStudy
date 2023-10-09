@@ -8,7 +8,7 @@
 성공
     <li>id=${member.id}</li>
     <li>username=${member.username}</li>
-    <li>age=${member.age}</li>v
+    <li>age=${member.age}</li>
 </body>
 <a href="/index.html">메인</a>
 </html>
