@@ -28,7 +28,7 @@ public class FrontControllerServletV1 extends HttpServlet {
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("FrontControllerServletV1.service");
 
-        String requestURI = request.getRequestURI();    //URI 경로를 받는다.
+        String requestURI = request.getRequestURI();    //URI 경로를 받는다. "/front-controller/v1/members/new-form"
 
         //다형성 사용
         ControllerV1 controller = controllerMap.get(requestURI);    //URI와 일치하는 객체 인스턴스 반환
