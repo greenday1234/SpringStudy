@@ -20,7 +20,6 @@ public class FrontControllerServletV2 extends HttpServlet {
 
     private Map<String, ControllerV2> controllerMap = new HashMap<>();
 
-    //Map에 Key와 value 넣음
     public FrontControllerServletV2() {
         controllerMap.put("/front-controller/v2/members/new-form", new MemberFormControllerV2());
         controllerMap.put("/front-controller/v2/members/save", new MemberSaveControllerV2());
