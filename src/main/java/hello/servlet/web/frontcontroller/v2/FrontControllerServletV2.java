@@ -31,7 +31,7 @@ public class FrontControllerServletV2 extends HttpServlet {
         String requestURI = request.getRequestURI();    //"/front-controller/v2/members/new-form"
 
         //다형성 사용
-        ControllerV2 controller = controllerMap.get(requestURI);    //URI와 일치하는 객체 인스턴스 반환
+        ControllerV2 controller = controllerMap.get(requestURI); 
 
         if(controller == null){
             response.setStatus(HttpServletResponse.SC_NOT_FOUND);
