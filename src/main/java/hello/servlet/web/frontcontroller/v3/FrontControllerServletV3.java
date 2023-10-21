@@ -41,7 +41,6 @@ public class FrontControllerServletV3 extends HttpServlet {
 
         //paramMap
         Map<String, String> paramMap = createParamMap(request);
-
         ModelView mv = controller.process(paramMap);
 
         //"/WEB-INF/views/new-form.jsp"
