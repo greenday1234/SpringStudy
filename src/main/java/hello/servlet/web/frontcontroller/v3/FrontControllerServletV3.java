@@ -45,7 +45,6 @@ public class FrontControllerServletV3 extends HttpServlet {
 
         //"/WEB-INF/views/new-form.jsp"
         MyView view = viewResolver(mv);
-
         view.render(mv.getModel(), request, response);
     }
 
@@ -57,6 +56,7 @@ public class FrontControllerServletV3 extends HttpServlet {
         Map<String, String> paramMap = new HashMap<>();
         request.getParameterNames().asIterator()
                 .forEachRemaining(paramName -> paramMap.put(paramName, request.getParameter(paramName)));
+
         return paramMap;
     }
 }
