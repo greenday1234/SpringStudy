@@ -28,17 +28,20 @@ public class FrontControllerServletV5 extends HttpServlet {
     private final Map<String, Object> handlerMappingMap = new HashMap<>();
     private final List<MyHandlerAdapter> handlerAdapters = new ArrayList<>();
 
+    //생성자에서 초기화
     public FrontControllerServletV5() {
         initHandlerMappingMap();
         initHandlerAdapters();
     }
 
+    //핸들러 매핑 초기화
     private void initHandlerMappingMap() {
         handlerMappingMap.put("/front-controller/v5/v3/members/new-form", new MemberFormControllerV3());
         handlerMappingMap.put("/front-controller/v5/v3/members/save", new MemberSaveControllerV3());
         handlerMappingMap.put("/front-controller/v5/v3/members", new MemberListControllerV3());
     }
 
+    //어댑터 초기화
     private void initHandlerAdapters() {
         handlerAdapters.add(new ControllerV3HandlerAdapter());
     }
@@ -68,7 +71,7 @@ public class FrontControllerServletV5 extends HttpServlet {
                 return adapter;
             }
         }
-        throw new IllegalArgumentException("handler adapter를 찾을 수 없습니다. handler = " + handler);
+        throw new IllegalArgumentException("handler adapter 를 찾을 수 없습니다. handler = " + handler);
     }
 
     //요청정보 갖고 핸들러 찾아오기
