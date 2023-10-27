@@ -51,6 +51,7 @@ public class FrontControllerServletV5 extends HttpServlet {
     //어댑터 초기화
     private void initHandlerAdapters() {
         handlerAdapters.add(new ControllerV3HandlerAdapter());
+        //v4 추가
         handlerAdapters.add(new ControllerV4HandlerAdapter());
     }
 
