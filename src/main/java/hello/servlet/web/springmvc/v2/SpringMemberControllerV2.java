@@ -35,7 +35,6 @@ public class SpringMemberControllerV2 {
         return mv;
     }
 
-    //메소드 단위에 URL 을 작성하지 않았기 때문에 클래스 단위의 URL 요청 시 실행된다.
     // /springmvc/v2/members
     @RequestMapping
     public ModelAndView members() {
