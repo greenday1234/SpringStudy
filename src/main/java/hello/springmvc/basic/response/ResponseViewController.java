@@ -16,6 +16,9 @@ public class ResponseViewController {
         return mav;
     }
 
+    /**
+     * 권장하는 방법
+     */
     @RequestMapping("/response-view-v2")
     public String responseViewV2(Model model){
         model.addAttribute("data", "hello");
@@ -23,6 +26,9 @@ public class ResponseViewController {
         return "response/hello";
     }
 
+    /**
+     * 권장하지 않는 방법
+     */
     @RequestMapping("/response/hello")
     public void responseViewV3(Model model){
         model.addAttribute("data", "hello");
