@@ -14,9 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.io.IOException;
 
 @Slf4j
-//@Controller
-//@ResponseBody
-@RestController
+@RestController // <- @Controller + @ResponseBody
 public class ResponseBodyController {
 
     @GetMapping("/response-body-string-v1")
