@@ -13,7 +13,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/basic/items")
-@RequiredArgsConstructor
+@RequiredArgsConstructor    //자동 의존 관계 주입
 public class BasicItemController {
 
     private final ItemRepository itemRepository;
