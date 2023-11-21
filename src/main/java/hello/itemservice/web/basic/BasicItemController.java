@@ -102,7 +102,7 @@ public class BasicItemController {
         return "redirect:/basic/items/" + item.getId();
     }
 
-    @PostMapping("/add")
+    @PostMapping("/add")    //RedirectAttributes 사용
     public String addItemV6(Item item, RedirectAttributes redirectAttributes){
         Item savedItem = itemRepository.save(item);
         redirectAttributes.addAttribute("itemId", savedItem.getId());
