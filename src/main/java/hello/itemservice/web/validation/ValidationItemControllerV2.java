@@ -162,5 +162,6 @@ public class ValidationItemControllerV2 {
         itemRepository.update(itemId, item);
         return "redirect:/validation/v2/items/{itemId}";
     }
+    
 }
 
