@@ -24,7 +24,6 @@ public class ValidationItemControllerV3 {
     private final ItemRepository itemRepository;
     private final ItemValidator itemValidator;
 
-
     @GetMapping
     public String items(Model model) {
         List<Item> items = itemRepository.findAll();
