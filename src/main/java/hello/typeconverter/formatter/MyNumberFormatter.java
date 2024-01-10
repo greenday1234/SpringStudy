@@ -14,7 +14,7 @@ public class MyNumberFormatter implements Formatter<Number> {
 
     @Override
     public Number parse(String text, Locale locale) throws ParseException {
-        log.info("test={}, locale={}", text, locale);
+        log.info("text={}, locale={}", text, locale);
 
         //"1,000" -> 1000
         NumberFormat format = NumberFormat.getInstance(locale);
