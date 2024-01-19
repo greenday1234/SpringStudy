@@ -2,8 +2,7 @@ package hello.jdbc.service;
 
 import hello.jdbc.domain.Member;
 import hello.jdbc.repository.MemberRepository;
-import hello.jdbc.repository.MemberRepositoryV4_1;
-import hello.jdbc.repository.MemberRepositoryV4_2;
+import hello.jdbc.repository.MemberRepositoryV5;
 import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
@@ -23,7 +22,7 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 /**
  * 예외 누수 문제 해결
  * SQLException 제거
- *
+ * <p>
  * MemberRepository 인터페이스 의존
  */
 @Slf4j
@@ -40,7 +39,7 @@ class MemberServiceV4Test {
     private MemberServiceV4 memberService;
 
     @TestConfiguration
-    static class TestConfig{
+    static class TestConfig {
 
         private final DataSource dataSource;
 
@@ -49,12 +48,13 @@ class MemberServiceV4Test {
         }
 
         @Bean
-        MemberRepository memberRepository(){
-            return new MemberRepositoryV4_2(dataSource);
+        MemberRepository memberRepository() {
+            //return new MemberRepositoryV4_2(dataSource);
+            return new MemberRepositoryV5(dataSource);
         }
 
         @Bean
-        MemberServiceV4 memberServiceV4(){
+        MemberServiceV4 memberServiceV4() {
             return new MemberServiceV4(memberRepository());
         }
 
@@ -68,7 +68,7 @@ class MemberServiceV4Test {
     }
 
     @Test
-    void AopCheck(){
+    void AopCheck() {
         log.info("memberService class={}", memberService.getClass());
         log.info("memberRepository class={}", memberRepository.getClass());
 

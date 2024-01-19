@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * 예외 누수 문제 해결
  * SQLException 제거
- *
+ * <p>
  * MemberRepository 인터페이스 의존
  */
 @Slf4j
@@ -21,8 +21,8 @@ public class MemberServiceV4 {
 
     @Transactional
     public void accountTransfer(String fromId, String toId, int money) {
-            //비즈니스 로직
-            bizLogic(fromId, toId, money);
+        //비즈니스 로직
+        bizLogic(fromId, toId, money);
     }
 
     private void bizLogic(String fromId, String toId, int money) {
@@ -35,7 +35,7 @@ public class MemberServiceV4 {
     }
 
     private void validation(Member toMember) {
-        if(toMember.getMemberId().equals("ex")){
+        if (toMember.getMemberId().equals("ex")) {
             throw new IllegalStateException("이체중 예외 발생");
         }
     }
