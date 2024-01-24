@@ -28,7 +28,7 @@ public class ItemServiceApplication {
 		return new TestDataInit(itemRepository);
 	}
 
-	@Bean
+/*	@Bean
 	@Profile("test")
 	public DataSource dataSource() {
 		log.info("메모리 데이터베이스 초기화");
@@ -38,5 +38,5 @@ public class ItemServiceApplication {
 		dataSource.setUsername("sa");
 		dataSource.setPassword("");
 		return dataSource;
-	}
+	}*/
 }
