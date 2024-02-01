@@ -3,7 +3,6 @@ package hello.itemservice.repository.v2;
 import com.querydsl.core.types.dsl.BooleanExpression;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import hello.itemservice.domain.Item;
-import hello.itemservice.domain.QItem;
 import hello.itemservice.repository.ItemSearchCond;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.StringUtils;
