@@ -7,8 +7,7 @@ import lombok.Setter;
 
 @Entity
 @DiscriminatorValue("B")
-@Getter
-@Setter
+@Getter @Setter
 public class Book extends Item {
 
     private String author;
