@@ -25,11 +25,6 @@ public class JpaMain {
             member.changeTeam(team);   //연관관계 편의 메소드
             em.persist(member);
 
-            /*team.getMembers().add(member);*/
-
-            /*em.flush();
-            em.clear();*/
-
             Team findTeam = em.find(Team.class, team.getId());  //1차 캐시(flush, clear 안하는 경우)
             List<Member> members = findTeam.getMembers();
 
