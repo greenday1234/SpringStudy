@@ -15,22 +15,19 @@ public class JpaMain {
         tx.begin();
 
         try{
-            //저장
-            Team team = new Team();
-            team.setName("TeamA");
-            em.persist(team);
+            Movie movie = new Movie();
+            movie.setDirector("aaaa");
+            movie.setActor("bbbb");
+            movie.setName("바람과 함께 사라지다");
+            movie.setPrice(10000);
 
-            Member member = new Member();
-            member.setUsername("member1");
-            member.changeTeam(team);   //연관관계 편의 메소드
-            em.persist(member);
+            em.persist(movie);
 
-            Team findTeam = em.find(Team.class, team.getId());  //1차 캐시(flush, clear 안하는 경우)
-            List<Member> members = findTeam.getMembers();
+            em.flush();
+            em.clear();
 
-            for (Member m : members) {
-                System.out.println("m = " + m.getUsername());
-            }
+            Movie findMovie = em.find(Movie.class, movie.getId());
+            System.out.println("findMovie = " + findMovie);
 
             tx.commit();
         }catch (Exception e) {
